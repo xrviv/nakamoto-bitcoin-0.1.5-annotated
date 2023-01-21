@@ -43,6 +43,26 @@ int nBestHeight = -1;
 uint256 hashBestChain = 0;
 CBlockIndex* pindexBest = NULL;
 
+/* This code declares several more global variables related to blocks and the blockchain.
+
+The first variable is mapBlockIndex which is a map data structure that stores block indexes 
+using the block hash as the key. The type of this variable is map<uint256, CBlockIndex*> where CBlockIndex is a struct 
+which contains information about a block and its position in the blockchain.
+
+The next variable hashGenesisBlock is a constant variable of type uint256, which is the hash of the first block in the blockchain.
+
+pindexGenesisBlock is a pointer to a CBlockIndex struct which points to the first block of the chain.
+
+nBestHeight is an integer variable which stores the height of the best block.
+
+hashBestChain is a variable of type uint256 which stores the hash of the best chain.
+
+pindexBest is a pointer to a CBlockIndex struct which points to the best block in the chain.
+
+This code is likely part of a larger program that implements a blockchain or a cryptocurrency. 
+These variables store information about the blockchain, such as the blocks that have been added to it, 
+the current best block, and the hash of the best chain.*/
+
 map<uint256, CBlock*> mapOrphanBlocks;
 multimap<uint256, CBlock*> mapOrphanBlocksByPrev;
 
