@@ -20,6 +20,22 @@ CCriticalSection cs_mapTransactions;
 unsigned int nTransactionsUpdated = 0;
 map<COutPoint, CInPoint> mapNextTx;
 
+/* This is C++ code that declares several global variables. The first line, #include "headers.h", is including a file called "headers.h". 
+The second line, #include "sha.h", is including a file called "sha.h". The code then declares a global variable cs_main of type CCriticalSection, 
+which is used to protect access to shared resources in a multi-threaded program.
+
+It also declares a global variable mapTransactions of type map<uint256, CTransaction>, 
+which is a map data structure that stores transactions using their hash as the key. 
+It also declares a global variable cs_mapTransactions of type CCriticalSection, 
+which is used to protect access to the mapTransactions.
+
+Another variable nTransactionsUpdated is also declared as unsigned int which is used to store number of transactions which are updated.
+
+Lastly, the code declares a global variable mapNextTx of type map<COutPoint, CInPoint>, which is a map data structure that stores information 
+about the next transaction for a given outpoint (a reference to a previous transaction's output).
+
+*/
+
 map<uint256, CBlockIndex*> mapBlockIndex;
 const uint256 hashGenesisBlock("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f");
 CBlockIndex* pindexGenesisBlock = NULL;
